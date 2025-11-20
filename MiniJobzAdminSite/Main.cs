@@ -7,19 +7,28 @@ namespace MiniJobzAdminSite
     public partial class Main : Form
     {
         private string username;
-        private Form activeForm = null; // itt tároljuk az aktuális aloldalt
+        private Form activeForm = null;
 
         public Main()
         {
             InitializeComponent();
+            this.Load += Main_Load;
         }
+
         public Main(string username)
         {
             InitializeComponent();
             this.username = username;
-            UsenameLabel.Text = username;
+            this.Load += Main_Load;
 
-            // Menü gombok stílusa
+            UsernameLabel.Text = username;
+
+            GreetingLabel.AutoSize = false;
+            GreetingLabel.Height = 80;
+            GreetingLabel.Font = new Font("Segoe UI", 36, FontStyle.Bold);
+            GreetingLabel.TextAlign = ContentAlignment.MiddleCenter;
+            GreetingLabel.Text = $"Üdvözöljük {username}!";
+
             HomeBtn.Padding = new Padding(0, 0, 10, 0);
             HomeBtn.BackColor = Color.FromArgb(46, 51, 73);
             UsersBtn.Padding = new Padding(0, 0, 10, 0);
@@ -29,10 +38,31 @@ namespace MiniJobzAdminSite
             SettingsBtn.Padding = new Padding(0, 0, 10, 0);
         }
 
+        private void Main_Load(object sender, EventArgs e)
+        {
+            closeBox.Location = new Point(this.Width - closeBox.Width - 10, 10);
+            closeBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            this.Controls.Add(closeBox);
+            closeBox.BringToFront();
+
+            ContentPanel.Controls.Add(GreetingLabel);
+            GreetingLabel.BringToFront();
+
+            PositionGreetingLabel();
+            GreetingLabel.Visible = true;
+        }
+
+        private void PositionGreetingLabel()
+        {
+            GreetingLabel.Width = Math.Min(600, ContentPanel.Width - 20);
+
+            GreetingLabel.Left = (ContentPanel.Width - GreetingLabel.Width) / 2;
+            GreetingLabel.Top = (ContentPanel.Height - GreetingLabel.Height) / 2 - 50;
+        }
+
         private void ResetMenuButtonColors()
         {
             Color defaultColor = Color.FromArgb(24, 30, 54);
-
             HomeBtn.BackColor = defaultColor;
             UsersBtn.BackColor = defaultColor;
             StatistcBtn.BackColor = defaultColor;
@@ -41,22 +71,24 @@ namespace MiniJobzAdminSite
             SettingsBtn.BackColor = defaultColor;
         }
 
-        // Ez a metódus kezeli, hogy mindig csak egy aloldal legyen látható
         private void OpenChildForm(Form childForm)
         {
             if (activeForm != null)
             {
-                this.Controls.Remove(activeForm); // eltávolítja a Main Controls-ból
-                activeForm.Close(); // bezárja a formot
+                activeForm.Close();
             }
 
             activeForm = childForm;
-            childForm.TopLevel = false; // ne legyen külön ablak
-            childForm.FormBorderStyle = FormBorderStyle.None; // keret nélkül
-            childForm.Dock = DockStyle.Fill; // kitölti a Main formot
-            this.Controls.Add(childForm);
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            ContentPanel.Controls.Clear();
+            ContentPanel.Controls.Add(childForm);
             childForm.BringToFront();
             childForm.Show();
+
+            GreetingLabel.Visible = false;
         }
 
         private void HomeBtn_Click(object sender, EventArgs e)
@@ -66,17 +98,21 @@ namespace MiniJobzAdminSite
 
             if (activeForm != null)
             {
-                this.Controls.Remove(activeForm);
                 activeForm.Close();
                 activeForm = null;
             }
+
+            ContentPanel.Controls.Clear();
+
+            ContentPanel.Controls.Add(GreetingLabel);
+            GreetingLabel.Visible = true;
+            PositionGreetingLabel();
         }
 
         private void UsersBtn_Click(object sender, EventArgs e)
         {
             ResetMenuButtonColors();
             UsersBtn.BackColor = Color.FromArgb(46, 51, 73);
-
             OpenChildForm(new UserManagement(username));
         }
 
@@ -84,36 +120,28 @@ namespace MiniJobzAdminSite
         {
             ResetMenuButtonColors();
             StatistcBtn.BackColor = Color.FromArgb(46, 51, 73);
-
-            // Ha kész lesz a Statistics form, itt nyisd meg
-            // OpenChildForm(new Statistics(username));
+            OpenChildForm(new Statistics(username));
         }
 
         private void ReportsBtn_Click(object sender, EventArgs e)
         {
             ResetMenuButtonColors();
             ReportsBtn.BackColor = Color.FromArgb(46, 51, 73);
-
-            // Ha kész lesz a Reports form, itt nyisd meg
-            // OpenChildForm(new Reports(username));
+            OpenChildForm(new Reports(username));
         }
 
         private void EmailBtn_Click(object sender, EventArgs e)
         {
             ResetMenuButtonColors();
             EmailBtn.BackColor = Color.FromArgb(46, 51, 73);
-
-            // Ha kész lesz az Email form, itt nyisd meg
-            // OpenChildForm(new Email(username));
+            OpenChildForm(new Email(username));
         }
 
         private void SettingsBtn_Click(object sender, EventArgs e)
         {
             ResetMenuButtonColors();
             SettingsBtn.BackColor = Color.FromArgb(46, 51, 73);
-
-            // Ha kész lesz a Settings form, itt nyisd meg
-            // OpenChildForm(new Settings(username));
+            OpenChildForm(new Settings(username));
         }
 
         private void closeBox_Click(object sender, EventArgs e)

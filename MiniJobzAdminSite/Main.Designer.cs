@@ -30,8 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.NavBar = new System.Windows.Forms.Panel();
-            this.PicBoxPanel = new System.Windows.Forms.Panel();
-            this.closeBox = new System.Windows.Forms.PictureBox();
+            this.UsernameLabel = new System.Windows.Forms.Label();
             this.UserBox = new System.Windows.Forms.PictureBox();
             this.EmailBtn = new System.Windows.Forms.Button();
             this.SettingsBtn = new System.Windows.Forms.Button();
@@ -39,19 +38,23 @@
             this.StatistcBtn = new System.Windows.Forms.Button();
             this.UsersBtn = new System.Windows.Forms.Button();
             this.HomeBtn = new System.Windows.Forms.Button();
+            this.PicBoxPanel = new System.Windows.Forms.Panel();
             this.Logo = new System.Windows.Forms.PictureBox();
-            this.UsenameLabel = new System.Windows.Forms.Label();
+            this.closeBox = new System.Windows.Forms.PictureBox();
+            this.ContentPanel = new System.Windows.Forms.Panel();
+            this.GreetingLabel = new System.Windows.Forms.Label();
             this.NavBar.SuspendLayout();
-            this.PicBoxPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserBox)).BeginInit();
+            this.PicBoxPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeBox)).BeginInit();
+            this.ContentPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // NavBar
             // 
             this.NavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.NavBar.Controls.Add(this.UsenameLabel);
+            this.NavBar.Controls.Add(this.UsernameLabel);
             this.NavBar.Controls.Add(this.UserBox);
             this.NavBar.Controls.Add(this.EmailBtn);
             this.NavBar.Controls.Add(this.SettingsBtn);
@@ -66,24 +69,15 @@
             this.NavBar.Size = new System.Drawing.Size(186, 577);
             this.NavBar.TabIndex = 0;
             // 
-            // PicBoxPanel
+            // UsernameLabel
             // 
-            this.PicBoxPanel.Controls.Add(this.Logo);
-            this.PicBoxPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PicBoxPanel.Location = new System.Drawing.Point(0, 0);
-            this.PicBoxPanel.Name = "PicBoxPanel";
-            this.PicBoxPanel.Size = new System.Drawing.Size(186, 144);
-            this.PicBoxPanel.TabIndex = 1;
-            // 
-            // closeBox
-            // 
-            this.closeBox.Image = global::MiniJobzAdminSite.Properties.Resources.close_x;
-            this.closeBox.Location = new System.Drawing.Point(906, 12);
-            this.closeBox.Name = "closeBox";
-            this.closeBox.Size = new System.Drawing.Size(33, 31);
-            this.closeBox.TabIndex = 1;
-            this.closeBox.TabStop = false;
-            this.closeBox.Click += new System.EventHandler(this.closeBox_Click);
+            this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameLabel.Location = new System.Drawing.Point(3, 498);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(87, 21);
+            this.UsernameLabel.TabIndex = 2;
+            this.UsernameLabel.Text = "Username";
             // 
             // UserBox
             // 
@@ -207,6 +201,15 @@
             this.HomeBtn.UseVisualStyleBackColor = true;
             this.HomeBtn.Click += new System.EventHandler(this.HomeBtn_Click);
             // 
+            // PicBoxPanel
+            // 
+            this.PicBoxPanel.Controls.Add(this.Logo);
+            this.PicBoxPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PicBoxPanel.Location = new System.Drawing.Point(0, 0);
+            this.PicBoxPanel.Name = "PicBoxPanel";
+            this.PicBoxPanel.Size = new System.Drawing.Size(186, 144);
+            this.PicBoxPanel.TabIndex = 1;
+            // 
             // Logo
             // 
             this.Logo.Image = global::MiniJobzAdminSite.Properties.Resources.Minijobz_Logo;
@@ -217,15 +220,36 @@
             this.Logo.TabIndex = 0;
             this.Logo.TabStop = false;
             // 
-            // UsenameLabel
+            // closeBox
             // 
-            this.UsenameLabel.AutoSize = true;
-            this.UsenameLabel.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsenameLabel.Location = new System.Drawing.Point(3, 498);
-            this.UsenameLabel.Name = "UsenameLabel";
-            this.UsenameLabel.Size = new System.Drawing.Size(87, 21);
-            this.UsenameLabel.TabIndex = 2;
-            this.UsenameLabel.Text = "Username";
+            this.closeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeBox.Image = global::MiniJobzAdminSite.Properties.Resources.close_x;
+            this.closeBox.Location = new System.Drawing.Point(720, 12);
+            this.closeBox.Name = "closeBox";
+            this.closeBox.Size = new System.Drawing.Size(33, 31);
+            this.closeBox.TabIndex = 1;
+            this.closeBox.TabStop = false;
+            this.closeBox.Click += new System.EventHandler(this.closeBox_Click);
+            // 
+            // ContentPanel
+            // 
+            this.ContentPanel.Controls.Add(this.GreetingLabel);
+            this.ContentPanel.Controls.Add(this.closeBox);
+            this.ContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ContentPanel.Location = new System.Drawing.Point(186, 0);
+            this.ContentPanel.Name = "ContentPanel";
+            this.ContentPanel.Size = new System.Drawing.Size(765, 577);
+            this.ContentPanel.TabIndex = 2;
+            // 
+            // GreetingLabel
+            // 
+            this.GreetingLabel.AutoSize = true;
+            this.GreetingLabel.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GreetingLabel.Location = new System.Drawing.Point(278, 144);
+            this.GreetingLabel.Name = "GreetingLabel";
+            this.GreetingLabel.Size = new System.Drawing.Size(166, 65);
+            this.GreetingLabel.TabIndex = 2;
+            this.GreetingLabel.Text = "label1";
             // 
             // Main
             // 
@@ -233,7 +257,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
-            this.Controls.Add(this.closeBox);
+            this.Controls.Add(this.ContentPanel);
             this.Controls.Add(this.NavBar);
             this.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(114)))), ((int)(((byte)(255)))));
@@ -243,10 +267,12 @@
             this.Text = "Main";
             this.NavBar.ResumeLayout(false);
             this.NavBar.PerformLayout();
-            this.PicBoxPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.closeBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserBox)).EndInit();
+            this.PicBoxPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeBox)).EndInit();
+            this.ContentPanel.ResumeLayout(false);
+            this.ContentPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -264,6 +290,8 @@
         private System.Windows.Forms.Button SettingsBtn;
         private System.Windows.Forms.PictureBox closeBox;
         private System.Windows.Forms.PictureBox UserBox;
-        private System.Windows.Forms.Label UsenameLabel;
+        private System.Windows.Forms.Label UsernameLabel;
+        private System.Windows.Forms.Panel ContentPanel;
+        private System.Windows.Forms.Label GreetingLabel;
     }
 }

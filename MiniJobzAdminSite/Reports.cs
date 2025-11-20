@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace MiniJobzAdminSite
 {
-    public partial class Reports : Main
+    public partial class Reports : Form
     {
-        public Reports(string username) : base(username)
+        private string username;
+
+        public Reports(string username)
         {
             InitializeComponent();
+            this.username = username;
         }
     }
 }

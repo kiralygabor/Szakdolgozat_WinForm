@@ -97,3 +97,7 @@ D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite
 D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.csproj.CopyComplete
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.Email.resources
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.Reports.resources
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.Settings.resources
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.Statistics.resources
