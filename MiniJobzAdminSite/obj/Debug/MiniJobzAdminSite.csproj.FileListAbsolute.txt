@@ -1,0 +1,99 @@
+D:\Király Gábor\Vizsgaremek\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\MiniJobzAdminSite.exe.config
+D:\Király Gábor\Vizsgaremek\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\MiniJobzAdminSite.exe
+D:\Király Gábor\Vizsgaremek\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\MiniJobzAdminSite.pdb
+D:\Király Gábor\Vizsgaremek\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.csproj.AssemblyReference.cache
+D:\Király Gábor\Vizsgaremek\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.Form1.resources
+D:\Király Gábor\Vizsgaremek\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.Properties.Resources.resources
+D:\Király Gábor\Vizsgaremek\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.csproj.GenerateResource.cache
+D:\Király Gábor\Vizsgaremek\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.csproj.CoreCompileInputs.cache
+D:\Király Gábor\Vizsgaremek\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.exe
+D:\Király Gábor\Vizsgaremek\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.pdb
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\MiniJobzAdminSite.exe.config
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\MiniJobzAdminSite.exe
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\MiniJobzAdminSite.pdb
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\BouncyCastle.Cryptography.dll
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\Google.Protobuf.dll
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\K4os.Compression.LZ4.dll
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\K4os.Hash.xxHash.dll
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\MySql.Data.dll
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Buffers.dll
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.IO.Pipelines.dll
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Memory.dll
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Numerics.Vectors.dll
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\ZstdSharp.dll
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\BouncyCastle.Cryptography.xml
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\Google.Protobuf.pdb
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\Google.Protobuf.xml
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\K4os.Compression.LZ4.xml
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\K4os.Hash.xxHash.xml
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\MySql.Data.xml
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Buffers.xml
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.IO.Pipelines.xml
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Memory.xml
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Numerics.Vectors.xml
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.csproj.AssemblyReference.cache
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.Properties.Resources.resources
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.csproj.GenerateResource.cache
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.csproj.CoreCompileInputs.cache
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.csproj.CopyComplete
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.exe
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.pdb
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.AdminSite.resources
+D:\Király Gábor\Szakmai Vizsga\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.Main.resources
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.csproj.AssemblyReference.cache
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.AdminSite.resources
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.Main.resources
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.Properties.Resources.resources
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.UserManagement.resources
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.csproj.GenerateResource.cache
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.csproj.CoreCompileInputs.cache
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.exe
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.pdb
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\MiniJobzAdminSite.exe.config
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\MiniJobzAdminSite.exe
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\MiniJobzAdminSite.pdb
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\BouncyCastle.Cryptography.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\Google.Protobuf.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\K4os.Compression.LZ4.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\K4os.Hash.xxHash.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\MySql.Data.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Buffers.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.IO.Pipelines.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Memory.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Numerics.Vectors.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\ZstdSharp.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\BouncyCastle.Cryptography.xml
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\Google.Protobuf.pdb
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\Google.Protobuf.xml
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\K4os.Compression.LZ4.xml
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\K4os.Hash.xxHash.xml
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\MySql.Data.xml
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Buffers.xml
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.IO.Pipelines.xml
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Memory.xml
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Numerics.Vectors.xml
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.csproj.CopyComplete
