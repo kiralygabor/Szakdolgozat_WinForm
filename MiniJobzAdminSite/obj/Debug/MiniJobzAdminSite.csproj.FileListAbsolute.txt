@@ -101,3 +101,4 @@ D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite
 D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.Reports.resources
 D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.Settings.resources
 D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.Statistics.resources
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.Sanction.resources
