@@ -207,10 +207,23 @@ namespace MiniJobzAdminSite
 
             int penaltyId = 0;
 
-            if (e.ColumnIndex == 2) penaltyId = 1;      
-            else if (e.ColumnIndex == 3) penaltyId = 2;  
-            else if (e.ColumnIndex == 4) penaltyId = 3;  
-            else return;
+            if (e.ColumnIndex == 2)
+            {
+                penaltyId = 1;
+            }
+            else if (e.ColumnIndex == 3)
+            {
+                penaltyId = 2;
+
+            }
+            else if (e.ColumnIndex == 4)
+            {
+                penaltyId = 3;
+            }
+            else
+            {
+                return;
+            }
 
             Sanction sanctionForm = new Sanction(userId, penaltyId);
             sanctionForm.ShowDialog();
