@@ -26,7 +26,7 @@ namespace MiniJobzAdminSite
             this.StartPosition = FormStartPosition.CenterScreen;
             this.BackColor = Color.FromArgb(46, 51, 73); 
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
-
+            this.MaximizeBox = false;
             SetupControls();
         }
 
