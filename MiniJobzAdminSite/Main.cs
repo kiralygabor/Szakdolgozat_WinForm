@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.IO;
+using MySql.Data.MySqlClient;
 
 namespace MiniJobzAdminSite
 {
@@ -8,6 +10,7 @@ namespace MiniJobzAdminSite
     {
         private string username;
         private Form activeForm = null;
+        private string connectionString = "Server=localhost;Database=minijobz_teszt;Uid=root;Pwd=;";
 
         public Main()
         {
@@ -20,15 +23,12 @@ namespace MiniJobzAdminSite
             InitializeComponent();
             this.username = username;
             this.Load += Main_Load;
-
             UsernameLabel.Text = username;
-
             GreetingLabel.AutoSize = false;
             GreetingLabel.Height = 80;
             GreetingLabel.Font = new Font("Segoe UI", 36, FontStyle.Bold);
             GreetingLabel.TextAlign = ContentAlignment.MiddleCenter;
             GreetingLabel.Text = $"Üdvözöljük {username}!";
-
             HomeBtn.Padding = new Padding(0, 0, 10, 0);
             HomeBtn.BackColor = Color.FromArgb(46, 51, 73);
             UsersBtn.Padding = new Padding(0, 0, 10, 0);
@@ -44,18 +44,16 @@ namespace MiniJobzAdminSite
             closeBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             this.Controls.Add(closeBox);
             closeBox.BringToFront();
-
             ContentPanel.Controls.Add(GreetingLabel);
             GreetingLabel.BringToFront();
-
             PositionGreetingLabel();
             GreetingLabel.Visible = true;
+            LoadProfilePicture();
         }
 
         private void PositionGreetingLabel()
         {
             GreetingLabel.Width = Math.Min(600, ContentPanel.Width - 20);
-
             GreetingLabel.Left = (ContentPanel.Width - GreetingLabel.Width) / 2;
             GreetingLabel.Top = (ContentPanel.Height - GreetingLabel.Height) / 2 - 50;
         }
@@ -74,20 +72,15 @@ namespace MiniJobzAdminSite
         private void OpenChildForm(Form childForm)
         {
             if (activeForm != null)
-            {
                 activeForm.Close();
-            }
-
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-
             ContentPanel.Controls.Clear();
             ContentPanel.Controls.Add(childForm);
             childForm.BringToFront();
             childForm.Show();
-
             GreetingLabel.Visible = false;
         }
 
@@ -95,15 +88,12 @@ namespace MiniJobzAdminSite
         {
             ResetMenuButtonColors();
             HomeBtn.BackColor = Color.FromArgb(46, 51, 73);
-
             if (activeForm != null)
             {
                 activeForm.Close();
                 activeForm = null;
             }
-
             ContentPanel.Controls.Clear();
-
             ContentPanel.Controls.Add(GreetingLabel);
             GreetingLabel.Visible = true;
             PositionGreetingLabel();
@@ -141,12 +131,61 @@ namespace MiniJobzAdminSite
         {
             ResetMenuButtonColors();
             SettingsBtn.BackColor = Color.FromArgb(46, 51, 73);
-            OpenChildForm(new Settings(username));
+            OpenChildForm(new Settings(username, this));
         }
 
         private void closeBox_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void LoadProfilePicture()
+        {
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT profile_picture_path FROM admins WHERE username=@username";
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        string path = Path.Combine(Application.StartupPath, result.ToString());
+                        if (File.Exists(path))
+                        {
+                            if (UserBox.Image != null) UserBox.Image.Dispose();
+                            UserBox.Image = Image.FromFile(path);
+                            UserBox.SizeMode = PictureBoxSizeMode.Zoom;
+                        }
+                    }
+                }
+            }
+        }
+
+        public void ChangeProfilePicture(string imagePath)
+        {
+            if (File.Exists(imagePath))
+            {
+                if (UserBox.Image != null) UserBox.Image.Dispose();
+                UserBox.Image = Image.FromFile(imagePath);
+                UserBox.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+        }
+
+        public void UpdateDatabaseProfilePath(string relativePath)
+        {
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "UPDATE admins SET profile_picture_path=@path WHERE username=@username";
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@path", relativePath);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
     }
 }
