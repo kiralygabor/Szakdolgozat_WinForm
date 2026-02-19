@@ -120,10 +120,63 @@ namespace MiniJobzAdminSite
 
         private void LogoutBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            AdminSite loginForm = new AdminSite();
-            loginForm.FormClosed += (s, args) => this.mainForm.Close();
-            loginForm.Show();
+            mainForm.Close();   
         }
+
+
+
+        private void newAdminBtn_Click(object sender, EventArgs e)
+        {
+            string newUsername = newAdminName.Text.Trim();
+            string newPassword = newAdminPassword.Text;
+            string confirmPassword = newAdminPassword2.Text;
+
+            if (string.IsNullOrEmpty(newUsername) ||
+                string.IsNullOrEmpty(newPassword) ||
+                string.IsNullOrEmpty(confirmPassword))
+            {
+                MessageBox.Show("Minden mezőt ki kell tölteni!");
+                return;
+            }
+
+            if (newPassword != confirmPassword)
+            {
+                MessageBox.Show("A jelszavak nem egyeznek!");
+                return;
+            }
+
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string checkQuery = "SELECT COUNT(*) FROM admins WHERE username=@username";
+                using (var checkCmd = new MySqlCommand(checkQuery, conn))
+                {
+                    checkCmd.Parameters.AddWithValue("@username", newUsername);
+                    int userExists = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                    if (userExists > 0)
+                    {
+                        MessageBox.Show("Ez a felhasználónév már létezik!");
+                        return;
+                    }
+                }
+
+                string insertQuery = "INSERT INTO admins (username, password) VALUES (@username, @password)";
+                using (var insertCmd = new MySqlCommand(insertQuery, conn))
+                {
+                    insertCmd.Parameters.AddWithValue("@username", newUsername);
+                    insertCmd.Parameters.AddWithValue("@password", newPassword);
+                    insertCmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Új admin sikeresen létrehozva!");
+
+                newAdminName.Clear();
+                newAdminPassword.Clear();
+                newAdminPassword2.Clear();
+            }
+        }
+
     }
 }

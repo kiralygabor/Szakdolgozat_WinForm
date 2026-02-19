@@ -12,24 +12,27 @@ namespace MiniJobzAdminSite
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+static void Main()
+{
+    Application.EnableVisualStyles();
+    Application.SetCompatibleTextRenderingDefault(false);
+
+    while (true) 
+    {
+        AdminSite login = new AdminSite();
+
+        if (login.ShowDialog() == DialogResult.OK)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            string loggedInUser = login.LoggedInUser;
 
-            using (AdminSite login = new AdminSite())
-            {
-                if (login.ShowDialog() == DialogResult.OK)
-                {
-                    string loggedInUser = login.LoggedInUser;
-
-                    Application.Run(new Main(loggedInUser));
-                }
-                else
-                {
-                    Application.Exit();
-                }
-            }
+            Application.Run(new Main(loggedInUser));
         }
+        else
+        {
+            Application.Exit();
+            break;  
+        }
+    }
+}
     }
 }
