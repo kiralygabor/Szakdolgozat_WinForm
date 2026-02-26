@@ -2,6 +2,7 @@
 using System.IO;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using BCrypt.Net;
 
 namespace MiniJobzAdminSite
 {
@@ -9,7 +10,7 @@ namespace MiniJobzAdminSite
     {
         private string username;
         private Main mainForm;
-        private string connectionString = "Server=localhost;Database=minijobz_teszt;Uid=root;Pwd=;";
+        private string connectionString = "Server=localhost;Database=minijobz;Uid=root;Pwd=;";
 
         private TextBox oldBox;
         private TextBox newBox;
@@ -66,7 +67,7 @@ namespace MiniJobzAdminSite
             Label confirmLabel = new Label() { Text = "Új jelszó újra:", Left = 10, Top = 100, Width = 100 };
             confirmBox = new TextBox() { Left = 120, Top = 100, Width = 150, PasswordChar = '*' };
 
-            Button submitBtn = new Button() { Text = "Módosítás", Left = 100, Width = 100, Top = 140, DialogResult = DialogResult.OK };
+            Button submitBtn = new Button() { Text = "Módosítás", Left = 100, Width = 100, Top = 140 };
             submitBtn.Click += PasswordSubmitBtn_Click;
 
             passwordForm.Controls.Add(oldLabel);
@@ -86,33 +87,43 @@ namespace MiniJobzAdminSite
             using (var conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
+
                 string checkQuery = "SELECT password FROM admins WHERE username=@username";
                 using (var cmd = new MySqlCommand(checkQuery, conn))
                 {
                     cmd.Parameters.AddWithValue("@username", username);
                     object result = cmd.ExecuteScalar();
-                    if (result != null && result.ToString() == oldBox.Text)
+
+                    if (result != null)
                     {
-                        if (newBox.Text == confirmBox.Text)
+                        string storedHash = result.ToString();
+
+                        if (BCrypt.Net.BCrypt.Verify(oldBox.Text, storedHash))
                         {
-                            string updateQuery = "UPDATE admins SET password=@newpass WHERE username=@username";
-                            using (var updateCmd = new MySqlCommand(updateQuery, conn))
+                            if (newBox.Text == confirmBox.Text)
                             {
-                                updateCmd.Parameters.AddWithValue("@newpass", newBox.Text);
-                                updateCmd.Parameters.AddWithValue("@username", username);
-                                updateCmd.ExecuteNonQuery();
+                                string newHash = BCrypt.Net.BCrypt.HashPassword(newBox.Text);
+
+                                string updateQuery = "UPDATE admins SET password=@newpass WHERE username=@username";
+                                using (var updateCmd = new MySqlCommand(updateQuery, conn))
+                                {
+                                    updateCmd.Parameters.AddWithValue("@newpass", newHash);
+                                    updateCmd.Parameters.AddWithValue("@username", username);
+                                    updateCmd.ExecuteNonQuery();
+                                }
+
+                                MessageBox.Show("Jelszó sikeresen módosítva!");
+                                passwordForm.Close();
                             }
-                            MessageBox.Show("Jelszó sikeresen módosítva!");
-                            passwordForm.Close();
+                            else
+                            {
+                                MessageBox.Show("Az új jelszavak nem egyeznek!");
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Az új jelszavak nem egyeznek!");
+                            MessageBox.Show("A régi jelszó helytelen!");
                         }
-                    }
-                    else
-                    {
-                        MessageBox.Show("A régi jelszó helytelen!");
                     }
                 }
             }
@@ -120,10 +131,8 @@ namespace MiniJobzAdminSite
 
         private void LogoutBtn_Click(object sender, EventArgs e)
         {
-            mainForm.Close();   
+            mainForm.Close();
         }
-
-
 
         private void newAdminBtn_Click(object sender, EventArgs e)
         {
@@ -162,11 +171,13 @@ namespace MiniJobzAdminSite
                     }
                 }
 
+                string hashedPassword = BCrypt.Net.BCrypt.HashPassword(newPassword);
+
                 string insertQuery = "INSERT INTO admins (username, password) VALUES (@username, @password)";
                 using (var insertCmd = new MySqlCommand(insertQuery, conn))
                 {
                     insertCmd.Parameters.AddWithValue("@username", newUsername);
-                    insertCmd.Parameters.AddWithValue("@password", newPassword);
+                    insertCmd.Parameters.AddWithValue("@password", hashedPassword);
                     insertCmd.ExecuteNonQuery();
                 }
 
@@ -177,6 +188,5 @@ namespace MiniJobzAdminSite
                 newAdminPassword2.Clear();
             }
         }
-
     }
 }

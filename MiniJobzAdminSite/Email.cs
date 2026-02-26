@@ -13,7 +13,7 @@ namespace MiniJobzAdminSite
         private string attachmentPath = "";
 
         private string connectionString =
-            "Server=localhost;Database=minijobz_teszt;Uid=root;";
+            "Server=localhost;Database=minijobz;Uid=root;";
 
         public Email(string username)
         {

@@ -17,7 +17,7 @@ namespace MiniJobzAdminSite
 
         private bool isUserReports = true;
 
-        private string connectionString = "Server=localhost;Database=minijobz_teszt;Uid=root";
+        private string connectionString = "Server=localhost;Database=minijobz;Uid=root";
 
         public Reports(string username)
         {
@@ -133,7 +133,7 @@ namespace MiniJobzAdminSite
             {
                 conn.Open();
                 string query = @"SELECT id, reporter_account_id, reported_account_id, description, status
-                                 FROM users_reports";
+                                 FROM user_reports";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -246,7 +246,7 @@ namespace MiniJobzAdminSite
                 string updateQuery;
                 if (isUserReports)
                 {
-                    updateQuery = "UPDATE users_reports SET status = 'closed' WHERE id = @id";
+                    updateQuery = "UPDATE user_reports SET status = 'closed' WHERE id = @id";
                 }
                 else
                 {

@@ -13,7 +13,7 @@ namespace MiniJobzAdminSite
         private TextBox searchTextBox;  
         private Button searchButton;    
 
-        private string connectionString = "Server=localhost;Database=minijobz_teszt;Uid=root";
+        private string connectionString = "Server=localhost;Database=minijobz;Uid=root";
 
         public UserManagement(string username)
         {

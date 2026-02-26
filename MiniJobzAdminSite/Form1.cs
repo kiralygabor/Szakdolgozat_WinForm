@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using BCrypt.Net;
 
 namespace MiniJobzAdminSite
 {
     public partial class AdminSite : Form
     {
-        private string connectionString = "Server=localhost;Database=minijobz_teszt;Uid=root";
+        private string connectionString = "Server=localhost;Database=minijobz;Uid=root";
         public string LoggedInUser { get; private set; }
-
 
         public AdminSite()
         {
@@ -36,7 +29,7 @@ namespace MiniJobzAdminSite
                 }
                 catch (Exception exp)
                 {
-                    MessageBox.Show("Nem sikerült csaatlakoztatni az adatbázist: " + exp.Message);
+                    MessageBox.Show("Nem sikerült csatlakoztatni az adatbázist: " + exp.Message);
                 }
             }
         }
@@ -49,20 +42,19 @@ namespace MiniJobzAdminSite
                 {
                     conn.Open();
                     string query = "SELECT password FROM admins WHERE username = @username";
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@username", username);
-
-                    var result = cmd.ExecuteScalar();
-
-                    if (result != null)
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
-                        string dbPassword = result.ToString();
+                        cmd.Parameters.AddWithValue("@username", username);
 
-                        return dbPassword == password;
-                    }
-                    else
-                    {
-                        return false; 
+                        var result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            string storedHash = result.ToString();
+                            return BCrypt.Net.BCrypt.Verify(password, storedHash);
+                        }
+
+                        return false;
                     }
                 }
                 catch (Exception exp)
@@ -91,7 +83,7 @@ namespace MiniJobzAdminSite
 
         private void ShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            PasswordInput.PasswordChar = ShowPassword.Checked ? '\0'  :'*';
+            PasswordInput.PasswordChar = ShowPassword.Checked ? '\0' : '*';
         }
     }
 }

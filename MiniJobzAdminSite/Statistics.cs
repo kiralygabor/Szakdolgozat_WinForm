@@ -11,7 +11,7 @@ namespace MiniJobzAdminSite
     public partial class Statistics : Form
     {
         private string username;
-        private string connectionString = "Server=localhost;Database=minijobz_teszt;Uid=root";
+        private string connectionString = "Server=localhost;Database=minijobz;Uid=root";
 
         public Statistics(string username)
         {
@@ -135,7 +135,7 @@ namespace MiniJobzAdminSite
                 try
                 {
                     conn.Open();
-                    string query = "SELECT COUNT(*) FROM advertisments WHERE status = 'completed';";
+                    string query = "SELECT COUNT(*) FROM advertisements WHERE status = 'closed';";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     completedAdvertisementsCount = Convert.ToInt32(cmd.ExecuteScalar());
                 }

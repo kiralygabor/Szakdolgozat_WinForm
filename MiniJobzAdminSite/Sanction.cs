@@ -9,7 +9,7 @@ namespace MiniJobzAdminSite
     {
         private int userId;
         private int penaltyId;
-        private string connectionString = "Server=localhost;Database=minijobz_teszt;Uid=root";
+        private string connectionString = "Server=localhost;Database=minijobz;Uid=root";
 
         private DateTimePicker dtPicker;
         private TextBox commentBox;
@@ -24,9 +24,10 @@ namespace MiniJobzAdminSite
             this.Text = "Szankció hozzáadása";
             this.Size = new Size(400, 300);
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.BackColor = Color.FromArgb(46, 51, 73); 
+            this.BackColor = Color.FromArgb(46, 51, 73);
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
+
             SetupControls();
         }
 
@@ -52,6 +53,11 @@ namespace MiniJobzAdminSite
                 BackColor = Color.FromArgb(24, 30, 54),
                 ForeColor = Color.White
             };
+
+            // 🔒 Ne lehessen múltbeli dátumot választani
+            dtPicker.MinDate = DateTime.Now;
+            dtPicker.Value = DateTime.Now;
+
             this.Controls.Add(dtPicker);
 
             Label lblComment = new Label
@@ -87,11 +93,12 @@ namespace MiniJobzAdminSite
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat
             };
-            okButton.Click += OkButton_Click;
-            this.Controls.Add(okButton);
 
             okButton.FlatAppearance.BorderSize = 0;
-            okButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(46, 51, 73); 
+            okButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(46, 51, 73);
+            okButton.Click += OkButton_Click;
+
+            this.Controls.Add(okButton);
         }
 
         private void OkButton_Click(object sender, EventArgs e)
@@ -99,9 +106,22 @@ namespace MiniJobzAdminSite
             DateTime expiration = dtPicker.Value;
             string comment = commentBox.Text;
 
+            // 🔒 Backend védelem múltbeli dátum ellen
+            if (expiration < DateTime.Now)
+            {
+                MessageBox.Show("Nem választhatsz múltbeli dátumot!",
+                                "Hiba",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
             if (string.IsNullOrWhiteSpace(comment))
             {
-                MessageBox.Show("A megjegyzés mező nem lehet üres!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("A megjegyzés mező nem lehet üres!",
+                                "Hiba",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
                 return;
             }
 
@@ -110,23 +130,36 @@ namespace MiniJobzAdminSite
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO blacklist (user_id, penalty_id, expiration_date, comment) " +
-                                   "VALUES (@userId, @penaltyId, @expiration, @comment)";
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@userId", userId);
-                    cmd.Parameters.AddWithValue("@penaltyId", penaltyId);
-                    cmd.Parameters.AddWithValue("@expiration", expiration.ToString("yyyy-MM-dd HH:mm:ss"));
-                    cmd.Parameters.AddWithValue("@comment", comment);
 
-                    cmd.ExecuteNonQuery();
+                    string query = @"INSERT INTO blacklist 
+                                    (user_id, penalty_id, expiration_date, comment) 
+                                     VALUES 
+                                    (@userId, @penaltyId, @expiration, @comment)";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@userId", userId);
+                        cmd.Parameters.AddWithValue("@penaltyId", penaltyId);
+                        cmd.Parameters.AddWithValue("@expiration", expiration);
+                        cmd.Parameters.AddWithValue("@comment", comment);
+
+                        cmd.ExecuteNonQuery();
+                    }
                 }
 
-                MessageBox.Show("Szankció sikeresen mentve!", "Siker", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Szankció sikeresen mentve!",
+                                "Siker",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hiba az adatbázis művelet során:\n" + ex.Message, "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Hiba az adatbázis művelet során:\n" + ex.Message,
+                                "Hiba",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
         }
     }

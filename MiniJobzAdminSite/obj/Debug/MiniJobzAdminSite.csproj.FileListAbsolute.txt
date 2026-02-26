@@ -103,3 +103,5 @@ D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite
 D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.Sanction.resources
 D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobzAdminSite.exe.config
 D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\obj\Debug\MiniJobz.DE7F3CA5.Up2Date
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\BCrypt.Net-Next.dll
+D:\Király Gábor\Szakmai Vizsga\Új verzió\MiniJobzAdminSite\MiniJobzAdminSite\bin\Debug\BCrypt.Net-Next.xml

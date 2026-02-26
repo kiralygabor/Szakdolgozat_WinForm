@@ -10,7 +10,7 @@ namespace MiniJobzAdminSite
     {
         private string username;
         private Form activeForm = null;
-        private string connectionString = "Server=localhost;Database=minijobz_teszt;Uid=root;Pwd=;";
+        private string connectionString = "Server=localhost;Database=minijobz;Uid=root;Pwd=;";
 
         public Main()
         {
