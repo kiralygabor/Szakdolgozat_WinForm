@@ -12,8 +12,7 @@ namespace MiniJobzAdminSite
         private string username;
         private string attachmentPath = "";
 
-        private string connectionString =
-            "Server=localhost;Database=minijobz;Uid=root;";
+        private string connectionString =  "Server=localhost;Database=minijobz;Uid=root;";
 
         public Email(string username)
         {
@@ -24,7 +23,10 @@ namespace MiniJobzAdminSite
 
         private void Email_Load(object sender, EventArgs e)
         {
-            titleBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            titleBox.DropDownStyle = ComboBoxStyle.DropDown;
+            titleBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            titleBox.AutoCompleteSource = AutoCompleteSource.ListItems;
+
             LoadEmails();
         }
 

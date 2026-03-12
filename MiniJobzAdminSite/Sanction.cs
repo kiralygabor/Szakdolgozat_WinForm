@@ -54,7 +54,6 @@ namespace MiniJobzAdminSite
                 ForeColor = Color.White
             };
 
-            // 🔒 Ne lehessen múltbeli dátumot választani
             dtPicker.MinDate = DateTime.Now;
             dtPicker.Value = DateTime.Now;
 
@@ -106,7 +105,6 @@ namespace MiniJobzAdminSite
             DateTime expiration = dtPicker.Value;
             string comment = commentBox.Text;
 
-            // 🔒 Backend védelem múltbeli dátum ellen
             if (expiration < DateTime.Now)
             {
                 MessageBox.Show("Nem választhatsz múltbeli dátumot!",
