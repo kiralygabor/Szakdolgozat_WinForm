@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F0B3C1C6-D0B1-4B8B-879E-847F1197294A}|MiniJobzAdminSite\\MiniJobzAdminSite.csproj|D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\minijobzadminsite\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F0B3C1C6-D0B1-4B8B-879E-847F1197294A}|MiniJobzAdminSite\\MiniJobzAdminSite.csproj|solutionrelative:minijobzadminsite\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF6AE990-3535-4CC7-ADE5-CB7636AA4656}|AdminSiteTest\\AdminSiteTest.csproj|d:\\kir\u00E1ly g\u00E1bor\\szakmai vizsga\\\u00FAj verzi\u00F3\\minijobzadminsite\\adminsitetest\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF6AE990-3535-4CC7-ADE5-CB7636AA4656}|AdminSiteTest\\AdminSiteTest.csproj|solutionrelative:adminsitetest\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F0B3C1C6-D0B1-4B8B-879E-847F1197294A}|MiniJobzAdminSite\\MiniJobzAdminSite.csproj|d:\\kir\u00E1ly g\u00E1bor\\szakmai vizsga\\\u00FAj verzi\u00F3\\minijobzadminsite\\minijobzadminsite\\usermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F0B3C1C6-D0B1-4B8B-879E-847F1197294A}|MiniJobzAdminSite\\MiniJobzAdminSite.csproj|solutionrelative:minijobzadminsite\\usermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF6AE990-3535-4CC7-ADE5-CB7636AA4656}|AdminSiteTest\\AdminSiteTest.csproj|d:\\kir\u00E1ly g\u00E1bor\\szakmai vizsga\\\u00FAj verzi\u00F3\\minijobzadminsite\\adminsitetest\\adminsitetest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FF6AE990-3535-4CC7-ADE5-CB7636AA4656}|AdminSiteTest\\AdminSiteTest.csproj|solutionrelative:adminsitetest\\adminsitetest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F0B3C1C6-D0B1-4B8B-879E-847F1197294A}|MiniJobzAdminSite\\MiniJobzAdminSite.csproj|D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\minijobzadminsite\\sanction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F0B3C1C6-D0B1-4B8B-879E-847F1197294A}|MiniJobzAdminSite\\MiniJobzAdminSite.csproj|solutionrelative:minijobzadminsite\\sanction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0B3C1C6-D0B1-4B8B-879E-847F1197294A}|MiniJobzAdminSite\\MiniJobzAdminSite.csproj|D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\minijobzadminsite\\usermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0B3C1C6-D0B1-4B8B-879E-847F1197294A}|MiniJobzAdminSite\\MiniJobzAdminSite.csproj|solutionrelative:minijobzadminsite\\usermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0B3C1C6-D0B1-4B8B-879E-847F1197294A}|MiniJobzAdminSite\\MiniJobzAdminSite.csproj|D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\minijobzadminsite\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0B3C1C6-D0B1-4B8B-879E-847F1197294A}|MiniJobzAdminSite\\MiniJobzAdminSite.csproj|solutionrelative:minijobzadminsite\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F0B3C1C6-D0B1-4B8B-879E-847F1197294A}|MiniJobzAdminSite\\MiniJobzAdminSite.csproj|D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\minijobzadminsite\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -102,8 +110,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminSiteTest",
+              "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\AdminSiteTest\\AdminSiteTest.csproj",
+              "RelativeDocumentMoniker": "AdminSiteTest\\AdminSiteTest.csproj",
+              "ToolTip": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\AdminSiteTest\\AdminSiteTest.csproj",
+              "RelativeToolTip": "AdminSiteTest\\AdminSiteTest.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-19T08:52:17.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\AdminSiteTest\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "AdminSiteTest\\UnitTest1.cs",
+              "ToolTip": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\AdminSiteTest\\UnitTest1.cs",
+              "RelativeToolTip": "AdminSiteTest\\UnitTest1.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAuwA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T08:42:50.419Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -112,13 +146,13 @@
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Sanction.cs",
               "ToolTip": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Sanction.cs",
               "RelativeToolTip": "MiniJobzAdminSite\\Sanction.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAowBcAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T11:21:28.262Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Settings.Designer.cs",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Settings.Designer.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Settings.Designer.cs",
@@ -130,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Form1.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Form1.cs",
@@ -142,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Program.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Program.cs",
@@ -154,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Main.cs",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Main.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Main.cs",
@@ -166,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Main.cs [Design]",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Main.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Main.cs",
@@ -177,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Form1.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Form1.cs",
@@ -188,33 +222,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Email.cs",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Email.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Email.cs",
               "ToolTip": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Email.cs",
               "RelativeToolTip": "MiniJobzAdminSite\\Email.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAwwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T07:32:10.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-20T07:32:10.972Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "UserManagement.cs",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\UserManagement.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\UserManagement.cs",
               "ToolTip": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\UserManagement.cs",
               "RelativeToolTip": "MiniJobzAdminSite\\UserManagement.cs",
-              "ViewState": "AgIAAMIAAAAAAAAAAAAuwMIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAwwKMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T11:00:34.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-19T11:00:34.377Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Statistics.cs",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Statistics.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Statistics.cs",
@@ -226,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Reports.cs",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Reports.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Reports.cs",
@@ -238,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Settings.cs",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Settings.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Settings.cs",
@@ -250,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "UserManagement.cs [Design]",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\UserManagement.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\UserManagement.cs",
@@ -261,19 +293,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Email.cs [Design]",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Email.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Email.cs",
               "ToolTip": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Email.cs [Design]",
               "RelativeToolTip": "MiniJobzAdminSite\\Email.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T07:38:57.367Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-01-29T07:38:57.367Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Settings.cs [Design]",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Settings.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Settings.cs",
@@ -284,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Email.Designer.cs",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Email.Designer.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Email.Designer.cs",
@@ -292,12 +323,11 @@
               "RelativeToolTip": "MiniJobzAdminSite\\Email.Designer.cs",
               "ViewState": "AgIAAGcAAAAAAAAAAAAqwHwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T07:40:56.41Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T07:40:56.41Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Main.Designer.cs",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Main.Designer.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Main.Designer.cs",
@@ -309,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "UserManagement.Designer.cs",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\UserManagement.Designer.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\UserManagement.Designer.cs",
@@ -321,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Reports.Designer.cs",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Reports.Designer.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Reports.Designer.cs",
@@ -333,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Reports.cs [Design]",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Reports.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Reports.cs",
@@ -344,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Sanction.cs [Design]",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Sanction.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Sanction.cs",
@@ -355,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Statistics.Designer.cs",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Statistics.Designer.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Statistics.Designer.cs",
@@ -367,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "D:\\Kir\u00E1ly G\u00E1bor\\Szakmai Vizsga\\\u00DAj verzi\u00F3\\MiniJobzAdminSite\\MiniJobzAdminSite\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "MiniJobzAdminSite\\Form1.Designer.cs",

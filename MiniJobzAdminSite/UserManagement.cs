@@ -10,8 +10,8 @@ namespace MiniJobzAdminSite
         private string username;
         private DataGridView usersGrid;
         private Panel usersPanel;
-        private TextBox searchTextBox;  
-        private Button searchButton;    
+        private TextBox searchTextBox;
+        private Button searchButton;
 
         private string connectionString = "Server=localhost;Database=minijobz;Uid=root";
 
@@ -20,10 +20,10 @@ namespace MiniJobzAdminSite
             InitializeComponent();
             this.username = username;
 
-            SetupLayout();  
-            SetupSearch();    
-            SetupGrid();     
-            LoadUsers();    
+            SetupLayout();
+            SetupSearch();
+            SetupGrid();
+            LoadUsers();
         }
 
         private void SetupLayout()
@@ -45,7 +45,7 @@ namespace MiniJobzAdminSite
                 Padding = new Padding(10),
                 BackColor = Color.FromArgb(46, 51, 73)
             };
-            this.Controls.Add(searchPanel);  
+            this.Controls.Add(searchPanel);
 
             Label searchLabel = new Label
             {
@@ -85,7 +85,7 @@ namespace MiniJobzAdminSite
         {
             string searchTerm = searchTextBox.Text.Trim();
 
-            if (string.IsNullOrEmpty(searchTerm))
+            if (IsSearchEmpty(searchTerm))
             {
                 LoadUsers();
             }
@@ -107,7 +107,7 @@ namespace MiniJobzAdminSite
                     cmd.Parameters.AddWithValue("@searchTerm", "%" + searchTerm + "%");
                     MySqlDataReader reader = cmd.ExecuteReader();
 
-                    usersGrid.Rows.Clear();  
+                    usersGrid.Rows.Clear();
                     while (reader.Read())
                     {
                         string userId = reader["id"].ToString();
@@ -127,8 +127,8 @@ namespace MiniJobzAdminSite
         private void SetupGrid()
         {
             usersGrid = new DataGridView();
-            usersGrid.Dock = DockStyle.Top; 
-            usersGrid.Height = 500;  
+            usersGrid.Dock = DockStyle.Top;
+            usersGrid.Height = 500;
             usersGrid.BackgroundColor = Color.FromArgb(46, 51, 73);
             usersGrid.BorderStyle = BorderStyle.None;
             usersGrid.AllowUserToAddRows = false;
@@ -149,7 +149,6 @@ namespace MiniJobzAdminSite
             colAccountId.HeaderText = "Azonosító";
             colAccountId.ReadOnly = true;
             colAccountId.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            colAccountId.DefaultCellStyle.ForeColor = Color.FromArgb(80, 114, 255);
             usersGrid.Columns.Add(colAccountId);
 
             var colUserId = new DataGridViewTextBoxColumn();
@@ -186,7 +185,6 @@ namespace MiniJobzAdminSite
             usersPanel.Controls.Add(usersGrid);
         }
 
-
         private void UsersGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
@@ -199,31 +197,15 @@ namespace MiniJobzAdminSite
                 return;
             }
 
-            if (!int.TryParse(userIdStr, out int userId))
+            if (!TryParseUserId(userIdStr, out int userId))
             {
                 MessageBox.Show($"Hibás felhasználó azonosító: {userIdStr}");
                 return;
             }
 
-            int penaltyId = 0;
+            int penaltyId = GetPenaltyId(e.ColumnIndex);
 
-            if (e.ColumnIndex == 2)
-            {
-                penaltyId = 1;
-            }
-            else if (e.ColumnIndex == 3)
-            {
-                penaltyId = 2;
-
-            }
-            else if (e.ColumnIndex == 4)
-            {
-                penaltyId = 3;
-            }
-            else
-            {
-                return;
-            }
+            if (penaltyId == 0) return;
 
             Sanction sanctionForm = new Sanction(userId, penaltyId);
             sanctionForm.ShowDialog();
@@ -239,10 +221,11 @@ namespace MiniJobzAdminSite
                     string query = "SELECT id, account_id FROM users;";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     MySqlDataReader reader = cmd.ExecuteReader();
+
                     while (reader.Read())
                     {
-                        string userId = reader["id"].ToString();         
-                        string accountId = reader["account_id"].ToString(); 
+                        string userId = reader["id"].ToString();
+                        string accountId = reader["account_id"].ToString();
 
                         usersGrid.Rows.Add(accountId, userId, null, null, null);
                     }
@@ -253,6 +236,33 @@ namespace MiniJobzAdminSite
             {
                 MessageBox.Show("Hiba az adatok betöltésekor:\n" + ex.Message);
             }
+        }
+
+        public int GetPenaltyId(int columnIndex)
+        {
+            if (columnIndex == 2)
+            {
+                return 1;
+            }
+            if (columnIndex == 3)
+            {
+                return 2;
+            }
+            if (columnIndex == 4)
+            {
+                return 3;
+            }
+            return 0;
+        }
+
+        public bool TryParseUserId(string input, out int userId)
+        {
+            return int.TryParse(input, out userId);
+        }
+
+        public bool IsSearchEmpty(string input)
+        {
+            return string.IsNullOrWhiteSpace(input);
         }
     }
 }
