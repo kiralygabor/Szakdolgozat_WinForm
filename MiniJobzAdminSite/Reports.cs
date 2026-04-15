@@ -172,7 +172,7 @@ namespace MiniJobzAdminSite
                 conn.Open();
                 string query = @"SELECT id, advertisement_id, reporter_account_id,
                                         reported_account_id, description, status
-                                 FROM advertisements_reports";
+                                 FROM advertisement_reports";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -250,7 +250,7 @@ namespace MiniJobzAdminSite
                 }
                 else
                 {
-                    updateQuery = "UPDATE advertisements_reports SET status = 'closed' WHERE id = @id";
+                    updateQuery = "UPDATE advertisement_reports SET status = 'closed' WHERE id = @id";
                 }
 
                 MySqlCommand cmd = new MySqlCommand(updateQuery, conn);
