@@ -84,6 +84,7 @@ namespace MiniJobzAdminSite
         private void ShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             PasswordInput.PasswordChar = ShowPassword.Checked ? '\0' : '*';
+            PasswordInput.Focus();
         }
     }
 }

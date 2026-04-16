@@ -97,7 +97,7 @@ namespace MiniJobzAdminSite
             reportsGrid.GridColor = Color.Gray;
 
             reportsGrid.CellClick += ReportsGrid_CellClick;
-            reportsGrid.CellFormatting += ReportsGrid_CellFormatting; 
+            reportsGrid.CellFormatting += ReportsGrid_CellFormatting;
 
             mainPanel.Controls.Add(reportsGrid);
         }
@@ -195,27 +195,30 @@ namespace MiniJobzAdminSite
         {
             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
             buttonColumn.HeaderText = "Műveletek";
-            buttonColumn.Text = "Elbírálva";
-            buttonColumn.UseColumnTextForButtonValue = true;
+            buttonColumn.UseColumnTextForButtonValue = false;
             buttonColumn.FlatStyle = FlatStyle.Flat;
+            buttonColumn.Name = "action";
 
             reportsGrid.Columns.Add(buttonColumn);
         }
 
         private void ReportsGrid_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (reportsGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+            if (reportsGrid.Columns[e.ColumnIndex].Name == "action")
             {
                 string status = reportsGrid.Rows[e.RowIndex].Cells["status"].Value?.ToString();
-                if (status == "closed")
+
+                if (status == "open")
                 {
-                    e.CellStyle.ForeColor = Color.Gray;
-                    reportsGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].ReadOnly = true;
+                    e.Value = "Elbírálás";
+                    e.CellStyle.ForeColor = Color.White;
+                    reportsGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].ReadOnly = false;
                 }
                 else
                 {
-                    e.CellStyle.ForeColor = Color.White;
-                    reportsGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].ReadOnly = false;
+                    e.Value = "Elbírálva";
+                    e.CellStyle.ForeColor = Color.Gray;
+                    reportsGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].ReadOnly = true;
                 }
             }
 
@@ -227,10 +230,11 @@ namespace MiniJobzAdminSite
             if (e.RowIndex < 0)
                 return;
 
-            if (!(reportsGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn))
+            if (reportsGrid.Columns[e.ColumnIndex].Name != "action")
                 return;
 
             string status = reportsGrid.Rows[e.RowIndex].Cells["status"].Value.ToString();
+
             if (status == "closed" || status == "rejected")
             {
                 MessageBox.Show("Ez a jelentés már le van zárva.");
@@ -243,15 +247,9 @@ namespace MiniJobzAdminSite
             {
                 conn.Open();
 
-                string updateQuery;
-                if (isUserReports)
-                {
-                    updateQuery = "UPDATE user_reports SET status = 'closed' WHERE id = @id";
-                }
-                else
-                {
-                    updateQuery = "UPDATE advertisement_reports SET status = 'closed' WHERE id = @id";
-                }
+                string updateQuery = isUserReports
+                    ? "UPDATE user_reports SET status = 'closed' WHERE id = @id"
+                    : "UPDATE advertisement_reports SET status = 'closed' WHERE id = @id";
 
                 MySqlCommand cmd = new MySqlCommand(updateQuery, conn);
                 cmd.Parameters.AddWithValue("@id", reportId);
@@ -259,7 +257,8 @@ namespace MiniJobzAdminSite
             }
 
             reportsGrid.Rows[e.RowIndex].Cells["status"].Value = "closed";
-            reportsGrid.Refresh(); 
+            reportsGrid.Refresh();
+
             MessageBox.Show("Jelentés sikeresen elbírálva.");
         }
     }

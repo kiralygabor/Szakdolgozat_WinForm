@@ -12,7 +12,7 @@ namespace MiniJobzAdminSite
         private string username;
         private string attachmentPath = "";
 
-        private string connectionString =  "Server=localhost;Database=minijobz;Uid=root;";
+        private string connectionString = "Server=localhost;Database=minijobz;Uid=root;";
 
         public Email(string username)
         {
@@ -91,6 +91,18 @@ namespace MiniJobzAdminSite
                     return;
                 }
 
+                if (string.IsNullOrWhiteSpace(titleBox.Text))
+                {
+                    MessageBox.Show("Adj meg egy tárgyat!");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(richTextBox1.Text))
+                {
+                    MessageBox.Show("Az üzenet nem lehet üres!");
+                    return;
+                }
+
                 string selectedEmail = titleBox.SelectedItem.ToString();
 
                 MailMessage mail = new MailMessage();
@@ -99,7 +111,8 @@ namespace MiniJobzAdminSite
                 mail.From = new MailAddress("minii.jobzz@gmail.com");
                 mail.To.Add(selectedEmail);
 
-                mail.Subject = "Admin üzenet";
+                mail.Subject = titleBox.Text;
+
                 mail.Body = richTextBox1.Text;
                 mail.IsBodyHtml = false;
 
@@ -125,6 +138,8 @@ namespace MiniJobzAdminSite
                     MessageBoxIcon.Information
                 );
 
+                richTextBox1.Clear();
+                titleBox.Text = "";
                 attachmentPath = "";
                 attachmentLabel.Text = "";
             }

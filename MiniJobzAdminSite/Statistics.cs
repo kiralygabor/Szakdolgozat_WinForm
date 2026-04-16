@@ -135,7 +135,7 @@ namespace MiniJobzAdminSite
                 try
                 {
                     conn.Open();
-                    string query = "SELECT COUNT(*) FROM advertisements WHERE status = 'closed';";
+                    string query = "SELECT COUNT(*) FROM advertisements WHERE status = 'completed';";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     completedAdvertisementsCount = Convert.ToInt32(cmd.ExecuteScalar());
                 }
